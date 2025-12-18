@@ -78,7 +78,9 @@ const Home = () => {
                 'Geometría Endurance-Race'
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 text-neutral-700">
-                  <CheckCircle2 className="text-purple-500 w-5 h-5" />
+                  <div className="w-8 h-8 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="text-purple-600 w-5 h-5" />
+                  </div>
                   <span className="font-light tracking-wide">{item}</span>
                 </div>
               ))}

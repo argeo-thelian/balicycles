@@ -90,10 +90,10 @@ export const Navbar = () => {
             <button
               key={item.id}
               onClick={() => handleNavigate(item.id)}
-              className={`text-2xl uppercase tracking-[0.2em] font-light flex items-center gap-4 group ${location.pathname === item.id ? tornasolText : 'text-neutral-900'}`}
+              className={`text-2xl uppercase tracking-[0.2em] font-light flex items-center gap-4 group ${location.pathname === item.id ? tornasoltextGreen : 'text-neutral-900'}`}
             >
               {item.icon && <item.icon className={`w-6 h-6 group-hover:text-purple-600 ${location.pathname === item.id ? 'text-purple-600' : 'text-neutral-600'}`} />}
-              <span className={`group-hover:${tornasolText}`}>{item.label}</span>
+              <span className={`group-hover:${tornasoltextGreen}`}>{item.label}</span>
             </button>
           ))}
         </div>

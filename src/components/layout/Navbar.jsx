@@ -52,7 +52,6 @@ export const Navbar = () => {
               <ExternalLogo href="./assets/icons/bali-icons-html.svg#letters" className="w-15" />
             </div>
             <span className={`text-xl font-bold tracking-[0.2em] flex items-center transition-colors duration-300 ${textColor}`}>
-              <span className={tornasoltextGreen}>CYCLES</span>
             </span>
           </div>
 

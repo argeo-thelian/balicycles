@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Wind, CheckCircle2 } from 'lucide-react';
 import { ButtonPrimary, ButtonOutline } from '../components/common/Buttons';
 import { BrandBaliTitleLogo, tornasolText, tornasoltextGreen } from '../components/common/Logos';
+import TickerBanner from '../components/layout/TickerBanner';
+import { partnersData } from '../data/partners';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -97,6 +99,13 @@ const Home = () => {
             />
           </div>
         </div>
+      </section>
+      {/* Partners Banner */}
+      <section className="bg-gray-50">
+        <div className="text-center pt-10 pb-4">
+          <p className="text-xs uppercase tracking-[0.3em] text-gray-400 font-bold">Nuestros Aliados Tecnológicos</p>
+        </div>
+        <TickerBanner items={partnersData} />
       </section>
     </div>
   );

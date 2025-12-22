@@ -5,7 +5,8 @@ export const aboutData = {
     carbonFibers: "La fibra de carbono hecha artesanalmente en el cluster industrial de Huizhou, China, uno de los más importantes a escala global, es de la mayor rigidez con el menor peso, actualmente de grado T1000 y T1100.",
     geoPerformance:"La geometría define el desempeño ya sea una bicicleta de ruta escaladora para recorridos con altimetría o una bicicleta de gravel para bikepackers con los bolts necesarios para botellas de agua y alforjas",
     vision: "En Bali pensamos que la mejor bicicleta es la que se adapta 100% al ciclista por ello existe una opción para customizar por completo la geometría y componentes",
-    catalog: "Por otro lado, tenemos una gran catalogo de colores con talleres de pintura en China y México",
+    catalog: "Por otro lado, tenemos una gran catalogo de colores con talleres de pintura en China y México, incluyendo nuestros colores camaleonicos patentados.",
+    catalogLink: " https://share.google/ob4Dbj7VsRJcAJ4Jw", 
     warranty: "Finalmente, Bali ofrece una garantia de dos años en el cuadro y una garantía de reparación en caso de accidente con nuestro partner -Total Carbon-, que determinará la gravedad y factibilidad del reemplazo",
     timeResponse: {
        desc: "Tiempos de respuesta",

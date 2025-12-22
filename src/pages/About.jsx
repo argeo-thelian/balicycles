@@ -60,8 +60,9 @@ const About = () => {
               href="./assets/icons/bali-icons-html.svg#baliCircle" 
               className="w-50 h-50 group-hover:scale-110 transition-transform duration-300" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-black text-neutral-900 uppercase mb-6 tracking-tighter">
-            BӑLì es <span className={tornasoltextGreen}>POTENCIA</span>
+          
+          <h1 className="flex text-4xl md:text-6xl font-black text-neutral-900 items-center justify-center uppercase mb-6 tracking-tighter">
+            <ExternalLogo href="./assets/icons/bali-icons-html.svg#letters" className="w-20 md:w-34 pt-1"/> <span className="pl-2 pr-3">es</span> <span className={tornasoltextGreen}>POTENCIA</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed border-l-4 border-purple-500 pl-6 md:pl-0 md:border-l-0">
             "{aboutData.meaningBali}"
@@ -87,7 +88,20 @@ const About = () => {
           />
           <FeatureCard 
             icon={Palette}
-            text={aboutData.catalog}
+            text={
+              <span>
+                {aboutData.catalog}{' '}
+                {/* Enlace estilizado con el color de la marca */}
+                <a 
+                  href={aboutData.catalogLink || "#"} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-purple-600 font-bold hover:text-purple-800 underline transition-colors cursor-pointer"
+                >
+                  Click aquí
+                </a>
+              </span>
+            }
           />
         </div>
 

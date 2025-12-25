@@ -28,22 +28,21 @@ const Contact = () => {
     try {
       // --- CONFIGURACIÓN DE SLACK ---
       // Pega aquí tu URL de Webhook real:
-      const WEBHOOK_URL = import.meta.env.VITE_SLACK_WEBHOOK_URL; 
+      // 1. Obtenemos la variable de entorno
+      const WEBHOOK_URL = import.meta.env.VITE_SLACK_WEBHOOK_URL;
       
-      // NOTA TÉCNICA: Slack bloquea peticiones directas desde el navegador por seguridad (CORS).
-      // Usamos 'no-cors' para enviar los datos de forma "opaca". El navegador no podrá leer la respuesta de éxito,
-      // pero Slack recibirá el mensaje si la URL es correcta. 
-      // Para una solución perfecta, usa un backend intermedio (ej. Cloud Function).
-      
-      if (WEBHOOK_URL.includes("XXXXXXXXXXXXXXXXXXXXXXXX")) {
-        console.warn("⚠️ Debes configurar la WEBHOOK_URL en Contact.jsx");
-      } else {
-        await fetch(WEBHOOK_URL, {
-          method: 'POST',
-          mode: 'no-cors', // Permite enviar sin esperar respuesta JSON válida por bloqueo CORS
-          body: JSON.stringify(slackMessage)
-        });
+      // 2. Validación simple: Si no existe, lanzamos error (evita el crash de .includes)
+      if (!WEBHOOK_URL) {
+        throw new Error("FATAL: VITE_SLACK_WEBHOOK_URL no está definida en Vercel/Environment.");
       }
+      
+
+      // 3. Enviamos (Ya no verificamos "includes" porque asumimos que la variable es la URL correcta)
+      await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors', 
+        body: JSON.stringify(slackMessage)
+      });
 
       // Simulación de éxito para la UI (ya que no podemos leer la respuesta real en modo no-cors)
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -52,7 +51,7 @@ const Contact = () => {
     } catch (error) {
       console.error("Error enviando formulario", error);
       setFormStatus('idle');
-      alert("Hubo un problema al enviar tu solicitud.");
+      alert("No se pudo enviar el mensaje. Por favor contáctanos por teléfono o Instagram.Hubo un problema al enviar tu solicitud.");
     }
   };
 

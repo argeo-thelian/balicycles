@@ -34,6 +34,10 @@ const BuildSection = ({ title, data }) => {
               {item.dimension && item.dimension !== "N/A" && <InfoRow label="Dimensión" value={item.dimension} />}
               {item.weight && item.weight !== "N/A" && <InfoRow label="Peso" value={item.weight} />}
               {item.type && <InfoRow label="Tipo" value={item.type} />}
+              {item.capacity && item.capacity !== "N/A" && <InfoRow label="Capacidad" value={item.capacity} />}
+              {item.with_extender && item.with_extender !== "N/A" && <InfoRow label="Con extensor" value={item.with_extender} />}
+              {item.rage && item.rage !== "N/A" && <InfoRow label="Rango" value={item.rage} />}
+
             </div>
           </div>
         ))}

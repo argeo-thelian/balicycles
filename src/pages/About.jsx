@@ -62,7 +62,7 @@ const About = () => {
           </div>
           
           <h1 className="flex text-4xl md:text-6xl font-black text-neutral-900 items-center justify-center uppercase mb-6 tracking-tighter">
-            <ExternalLogo href="./assets/icons/bali-icons-html.svg#letters" className="w-20 md:w-34 pt-1"/> <span className="pl-2 pr-3">es</span> <span className={tornasoltextGreen}>POTENCIA</span>
+            <ExternalLogo href="./assets/icons/bali-icons-html.svg#letters" className="w-20 md:w-34"/> <span className="pl-2 pr-3">es</span> <span className={tornasoltextGreen}>POTENCIA</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed border-l-4 border-purple-500 pl-6 md:pl-0 md:border-l-0">
             "{aboutData.meaningBali}"
